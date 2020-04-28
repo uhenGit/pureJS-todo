@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./style.css" />
+    <title>VanillaJS App</title>
+  </head>
+  <body>
+    <header class="center">
+      <div class="headSet">
+        <img src="./assets/to-do.png" alt="todo list icon" />
+        <h1>Lightweight<span class="blue"> ToDo</span> App</h1>
+      </div>
+      <button class="add" data-content="+">
+        <span>Add New ToDo</span>
+      </button>
+      <div class="outer close">
+        <form class="addTodo inner">
+          <a href="#" class="close">X</a>
+          <input type="text" autofocus />
+          <button class="submit add" type="submit" data-content="OK">
+            <span>Create</span>
+          </button>
+        </form>
+      </div>
+    </header>
+    <section class="center">
+      <table>
+        <thead>
+          <tr>
+            <td>
+              Todo Text
+            </td>
+            <td>Delete</td>
+          </tr>
+        </thead>
+        <tbody class="itemsBody"></tbody>
+      </table>
+    </section>
+  </body>
+</html>
