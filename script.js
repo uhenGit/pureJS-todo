@@ -1,3 +1,10 @@
+if (navigator.serviceWorker) {
+  navigator.serviceWorker
+    .register("sw.js")
+    .then((register) => console.log("register object: ", register))
+    .catch((err) => console.log("register error: ", err));
+}
+
 // Class: set ToDoItem
 class ToDoItem {
   constructor(body, id) {
