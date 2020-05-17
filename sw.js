@@ -8,7 +8,8 @@ if (navigator.serviceWorker) {
 
 const cacheVersion = "v10";
 const assets = [
-  "https://uhengit.github.io/pureJS-todo/",
+  "/pureJS-todo/",
+  "/pureJS-todo/index.html",
   "./style.css",
   "./script.js",
   "./sw.js",
