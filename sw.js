@@ -8,13 +8,13 @@ if (navigator.serviceWorker) {
 
 const cacheVersion = "v10";
 const assets = [
-  "/index.html",
-  "/style.css",
-  "/script.js",
-  "/sw.js",
-  "/manifest.json",
-  "/images/icons/",
-  "/assets/to-do.png",
+  "./index.html",
+  "./style.css",
+  "./script.js",
+  "./sw.js",
+  "./manifest.json",
+  "./images/icons/",
+  "./assets/to-do.png",
 ];
 
 /*self.addEventListener("install", (e) => {
