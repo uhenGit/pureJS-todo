@@ -25,16 +25,21 @@ const assets = [
   e.waitUntil(preCache);
 });*/
 self.addEventListener("install", (e) => {
+  console.log("[Servicework] install");
   e.waitUntil(
     caches
       .open(cacheVersion)
-      .then((cache) => cache.addAll(assets))
-      .then(() => self.skipWaiting())
+      .then((cache) => {
+        cache.addAll(assets);
+        console.log("install cache: ", cache.keys());
+      })
+      //.then(() => self.skipWaiting())
       .catch((err) => console.log(`caching error: ${err}`))
   );
 });
 
 self.addEventListener("activate", (e) => {
+  console.log("[Servicework] Activate");
   e.waitUntil(
     caches.keys().then((allCacheVersions) => {
       return Promise.all(
