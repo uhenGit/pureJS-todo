@@ -8,15 +8,14 @@ html {
 }
 .center {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .marg-0-10 {
   margin: 0 10px;
 }
-.headSet > * {
-  display: inline-block;
-  vertical-align: middle;
-}
-.headSet h1 {
+.center h1 {
   font-size: 50px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
@@ -145,7 +144,7 @@ thead {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 20px;
   font-weight: 700;
-  color: rgb(7, 7, 192);
+  color: rgb(9, 9, 109);
 }
 .checked {
   position: relative;
@@ -171,4 +170,31 @@ thead {
 .delete:hover {
   color: rgb(250, 230, 200);
   background-color: rgb(220, 25, 25);
+}
+@media screen and (max-width: 500px) {
+  .center h1 {
+    font-size: 30px;
+    margin: 10px 0;
+  }
+  section {
+    max-width: 80%;
+  }
+  thead {
+    font-size: 20px;
+  }
+  .add {
+    width: 70%;
+  }
+  .inner {
+    left: 15%;
+    width: 70%;
+    height: 40%;
+  }
+  .addTodo input {
+    margin: 3rem auto 1rem auto;
+    width: 70%;
+  }
+  .submit {
+    margin: 1.2rem;
+  }
 }
