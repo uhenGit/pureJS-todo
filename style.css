@@ -185,7 +185,8 @@ thead {
     margin-bottom: 1rem;
   }
   .top_head img {
-    width: 15%;
+    max-width: 15%;
+    height: auto;
   }
   section {
     max-width: 90%;
