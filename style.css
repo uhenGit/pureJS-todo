@@ -3,6 +3,9 @@ html {
   padding: 0;
   margin: 0;
 }
+header {
+  margin-bottom: 1rem;
+}
 .blue {
   color: rgb(0, 100, 200);
 }
@@ -173,17 +176,32 @@ thead {
 }
 @media screen and (max-width: 500px) {
   .center h1 {
-    font-size: 30px;
+    font-size: 1.5rem;
     margin: 10px 0;
   }
+  .top_head {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem auto;
+  }
+  .top_head img {
+    width: 15%;
+  }
   section {
-    max-width: 80%;
+    max-width: 90%;
   }
   thead {
-    font-size: 20px;
+    font-size: 1.2rem;
+  }
+  .itemsBody > tr > td:first-child {
+    font-size: 1rem;
+  }
+  .delete {
+    font-size: 1.5rem;
   }
   .add {
-    width: 70%;
+    width: 60%;
+    font-size: 1.3rem;
   }
   .inner {
     left: 15%;
