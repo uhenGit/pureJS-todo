@@ -156,6 +156,8 @@ thead tr td:nth-child(2) {
   border-left: 1px dotted rgb(9, 9, 109);
   border-right: 1px dotted rgb(9, 9, 109);
   padding: 8px 5px;
+  text-align: center;
+  font-size: 0.9rem;
 }
 .checked {
   text-decoration: line-through;
@@ -196,6 +198,9 @@ thead tr td:nth-child(2) {
   }
   .itemsBody > tr > td {
     font-size: 0.8rem;
+  }
+  .itemsBody > tr > td:nth-child(2) {
+    font-size: 0.6rem;
   }
   .delete {
     font-size: 1.2rem;
