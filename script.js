@@ -7,8 +7,8 @@ if (navigator.serviceWorker) {
 
 // Class: set ToDoItem
 class ToDoItem {
-  constructor(body, id) {
-    (this.body = body), (this.id = id);
+  constructor(body, date, id) {
+    (this.body = body), (this.date = date), (this.id = id);
   }
 }
 
@@ -54,6 +54,7 @@ class TodoList {
     raw.setAttribute("data-id", item.id);
     raw.innerHTML = `
       <td class="item" title="Click if You done it">${item.body}</td>
+      <td><span class="itemDate">${item.date}</span></td>
       <td><button class="delete" title="Delete this item">X</button></td>
     `;
     document.querySelector(".itemsBody").appendChild(raw);
@@ -102,17 +103,18 @@ for (let i = 0; i < close.length; i++) {
 // Event: Add New Item from Modal and clear Input field
 document.querySelector("form").addEventListener("submit", (e) => {
   e.preventDefault();
-  const newItemText = document.querySelector("input").value;
-  if (newItemText !== "") {
+  const newItemText = document.querySelector(".newItemText").value;
+  const newItemDate = document.querySelector(".newItemDate").value;
+  if (newItemText !== "" && newItemDate !== "") {
     TodoList.alert("New todo created", "green");
-
     const idArr = new Uint16Array(1),
       uniqueId = window.crypto.getRandomValues(idArr);
 
-    const newItem = new ToDoItem(newItemText, uniqueId[0]);
+    const newItem = new ToDoItem(newItemText, newItemDate, uniqueId[0]);
     TodoList.addItem(newItem);
     Store.addItem(newItem);
-    document.querySelector("input").value = "";
+    document.querySelector(".newItemText").value = "";
+    document.querySelector(".newItemDate").value = "";
   } else {
     TodoList.alert("Empty item is not valid! Please try again", "red");
   }

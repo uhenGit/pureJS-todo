@@ -27,7 +27,8 @@
       <div class="outer close">
         <form class="addTodo inner">
           <a href="#" class="close">X</a>
-          <input type="text" autofocus />
+          <input type="text" autofocus class="newItemText"/>
+          <input type="date" class="newItemDate">
           <button class="submit add" type="submit" data-content="OK">
             <span>Create</span>
           </button>
@@ -41,7 +42,8 @@
             <td>
               Todo Text
             </td>
-            <td>Delete</td>
+            <td>Date</td>
+            <td>Del</td>
           </tr>
         </thead>
         <tbody class="itemsBody"></tbody>

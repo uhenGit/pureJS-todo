@@ -123,7 +123,7 @@ section table {
   border-collapse: collapse;
 }
 td {
-  padding: 8px;
+  padding: 8px 0;
   text-align: left;
   border-bottom: 1px solid rgb(0, 100, 200);
 }
@@ -136,6 +136,9 @@ thead {
   font-weight: 600;
   color: rgb(0, 0, 255);
 }
+thead tr td:nth-child(2) {
+  text-align: center;
+}
 .itemsBody tr:hover {
   background-color: rgba(0, 0, 0, 0.1);
   transition-duration: 300ms;
@@ -143,22 +146,19 @@ thead {
 .itemsBody {
   cursor: pointer;
 }
-.itemsBody > tr > td:first-child {
+.itemsBody > tr > td {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 20px;
   font-weight: 700;
   color: rgb(9, 9, 109);
 }
-.checked {
-  position: relative;
+.itemsBody > tr > td:nth-child(2) {
+  border-left: 1px dotted rgb(9, 9, 109);
+  border-right: 1px dotted rgb(9, 9, 109);
+  padding: 8px 5px;
 }
-.checked::after {
-  content: "";
-  position: absolute;
-  border: 1px solid rgb(7, 7, 192);
-  width: 100%;
-  left: 0;
-  top: 50%;
+.checked {
+  text-decoration: line-through;
 }
 .delete {
   font-weight: bold;
@@ -189,20 +189,20 @@ thead {
     height: auto;
   }
   section {
-    max-width: 90%;
+    max-width: 95%;
   }
   thead {
-    font-size: 1.2rem;
-  }
-  .itemsBody > tr > td:first-child {
     font-size: 1rem;
   }
+  .itemsBody > tr > td {
+    font-size: 0.8rem;
+  }
   .delete {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   .add {
     width: 60%;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   .inner {
     left: 15%;
