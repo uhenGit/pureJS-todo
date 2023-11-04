@@ -75,14 +75,15 @@ header {
   left: 25%;
   background-color: rgb(205, 215, 250);
   width: 50%;
-  height: 25%;
+  min-height: 25%;
   padding: 30px 0;
 }
 .addTodo input {
   display: block;
   margin: 1rem auto;
+  padding: 0.5rem;
   width: 60%;
-  font-size: 25px;
+  font-size: 1rem;
 }
 .submit {
   margin-top: 1.2rem;
@@ -92,8 +93,9 @@ a.close {
   color: rgb(0, 100, 200);
   background-color: rgb(200, 230, 200);
   font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
   position: absolute;
-  right: 25px;
+  right: 5%;
   border: 1px solid rgb(0, 100, 200);
   padding: 3px 4px 2px 4px;
   border-radius: 3px;
@@ -132,7 +134,7 @@ td:last-child {
 }
 thead {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 600;
   color: rgb(0, 0, 255);
 }
@@ -181,12 +183,12 @@ thead tr td:nth-child(2) {
     font-size: 1.5rem;
     margin: 10px 0;
   }
-  .top_head {
+  .topHead {
     display: flex;
     justify-content: space-around;
     margin-bottom: 1rem;
   }
-  .top_head img {
+  .topHead img {
     max-width: 15%;
     height: auto;
   }
@@ -210,8 +212,8 @@ thead tr td:nth-child(2) {
     font-size: 1.2rem;
   }
   .inner {
-    left: 15%;
-    width: 70%;
+    left: 5%;
+    width: 90%;
     height: 40%;
   }
   .addTodo input {
